@@ -2013,7 +2013,7 @@ loop:
 				// window.setTimeout/setInterval
 				} else if (p[0] && p[0].id === "(string)" &&
 					   left.value === "." &&
-					   left.left.value === "window" &&
+					   left.left && left.left.value === "window" &&
 					   (left.right === "setTimeout" ||
 						left.right === "setInterval")) {
 					warning("W066", left);
