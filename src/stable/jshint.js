@@ -1082,7 +1082,7 @@ loop:
 				f.apply(this, [left, right]);
 			}
 
-			if (!left) {
+			if (!left || !right) {
 				quit();
 			}
 
