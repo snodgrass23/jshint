@@ -1197,7 +1197,7 @@ loop:
 		x.led = function (left) {
 			if (state.option.plusplus) {
 				warning("W016", this, this.id);
-			} else if ((!left.identifier || left.reserved) && left.id !== "." && left.id !== "[") {
+			} else if ((!left || !left.identifier || left.reserved) && left.id !== "." && left.id !== "[") {
 				warning("W017", this);
 			}
 
